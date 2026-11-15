@@ -335,7 +335,7 @@ function App() {
               <h2>Sign in</h2>
               <p className="muted">
                 Use your TaskFlow account. Credentials are sent to Auth.js through
-                the same-origin development proxy.
+                the same-origin TaskFlow API proxy.
               </p>
               <form onSubmit={handleLogin} className="form">
                 <label>

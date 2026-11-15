@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: taskflow-react-proxy
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: VITE_API_MODE
+        value: taskflow
+      - key: TASKFLOW_BACKEND_URL
+        value: https://task-flow-six-rouge.vercel.app
